@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * partition - apply the (Lomuto) partition algorithm 
+ * partition - apply the (Lomuto) partition algorithm
  * @array: array of integers to be sorted
  * @lb: lower boundindex in array that begins partition
  * @ub: upper bound index in array that ends partition
