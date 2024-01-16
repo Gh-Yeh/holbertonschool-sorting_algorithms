@@ -8,7 +8,7 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int i, j;
+	size_t i, j;
 
 	if (!array)
 		return;
@@ -24,4 +24,19 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 	}
+}
+
+/**
+ * swap - to swap values
+ * @vl_one: Fisrt value
+ * @vl_two: Second value
+ * Return: 0
+ */
+void swap(int *vl_one, int *vl_two)
+{
+	int temp;
+
+	temp = *vl_two;
+	*vl_two = *vl_one;
+	*vl_one = temp;
 }
