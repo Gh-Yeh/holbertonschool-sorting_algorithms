@@ -1,31 +1,27 @@
 #include "sort.h"
 
 /**
- * bubble_sort - sort an array using bubble sort teq
- * @array: array
- * @size: size of array
+ * bubble_sort - Sort elemnts in an array
+ * @array: Array
+ * @size: Size of array
+ * Return: 0
  */
 void bubble_sort(int *array, size_t size)
 {
-	int temp = 0;
-	int flag = 0;
+	unsigned int i, j;
 
-	for (size_t i = 0; i < size - 1; i++)
+	if (!array)
+		return;
+
+	for (i = 0; i < size - 1; i++)
 	{
-		flag = 0;
-
-		for (size_t j = 0; j < size - 1 - i; j++)
+		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
-				temp = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = temp;
-				flag = 1;
+				swap(&array[j], &array[j + 1]);
 				print_array(array, size);
 			}
 		}
-		if (flag == 0)
-			break;
 	}
 }
